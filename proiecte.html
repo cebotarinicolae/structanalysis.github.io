@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Proiecte — Inginerie Structurală</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -12,7 +12,7 @@
   <div class="container nav">
     <a href="index.html">Acasă</a>
     <a href="servicii.html">Servicii</a>
-    <a href="proiecte.html" class="active">Proiecte</a>
+    <a href="proiecte.html">Proiecte</a>
     <a href="contact.html">Contact</a>
   </div>
 </header>
@@ -28,25 +28,20 @@
   <div class="container">
     <div class="project">
       <h3>Clădire Rezidențială P+2E</h3>
-      <figure>
-        <img src="assets/hero-structural.png" alt="Cadru beton armat" loading="lazy" onerror="this.style.display='none'">
-      </figure>
+      <!-- imagine opțională -->
+      <img src="assets/hero-structural.png" alt="Clădire rezidențială — exemplu de modelare" />
       <p>Structură din beton armat pe cadre. Modelare 3D, acțiuni seismice conform EC8, dimensionarea elementelor verticale și a plăcilor, optimizarea armăturilor. Rezultat: consum redus de material și rigiditate uniform distribuită.</p>
     </div>
 
     <div class="project">
       <h3>Hală Industrială Metalică</h3>
-      <figure>
-        <img src="assets/hero-structural.png" alt="Hală metalică – cadru & contravântuiri" loading="lazy" onerror="this.style.display='none'">
-      </figure>
+      <img src="assets/hero-structural.png" alt="Hală metalică — exemplu structural" />
       <p>Cadre metalice cu contravântuire. Verificări la vânt și încărcări tehnologice, noduri și ancorări, stabilitate globală și flambaj local. Detalii de montaj simplificate.</p>
     </div>
 
     <div class="project">
       <h3>Extindere Clădire Existentă</h3>
-      <figure>
-        <img src="assets/hero-structural.png" alt="Extindere și consolidare" loading="lazy" onerror="this.style.display='none'">
-      </figure>
+      <img src="assets/hero-structural.png" alt="Extindere clădire — exemplu de consolidare" />
       <p>Expertiză preliminară, ridicare în teren, model structural al ansamblului, soluții de consolidare incrementală compatibile cu arhitectura și funcțiunile existente.</p>
     </div>
   </div>
@@ -58,12 +53,12 @@
 
 <script>
 (function(){
-  const path = location.pathname.split('/').pop() || 'proiecte.html';
+  const file = location.pathname.split('/').pop() || 'proiecte.html';
   document.querySelectorAll('.nav a').forEach(a=>{
-    const href = a.getAttribute('href');
-    if (href === path) a.classList.add('active');
+    if (a.getAttribute('href') === file) a.classList.add('active');
   });
 })();
 </script>
 </body>
 </html>
+``
