@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — Inginerie Structurală</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -13,7 +13,7 @@
     <a href="index.html">Acasă</a>
     <a href="servicii.html">Servicii</a>
     <a href="proiecte.html">Proiecte</a>
-    <a href="contact.html" class="active">Contact</a>
+    <a href="contact.html">Contact</a>
   </div>
 </header>
 
@@ -24,8 +24,9 @@
   </div>
 </section>
 
+<!-- imagine contextuală (opțional) -->
 <figure class="container">
-  <img src="assets/hero-structural.png" alt="Contact — inginerie structurală" class="hero-img" loading="lazy" onerror="this.style.display='none'">
+  <img class="hero-img" src="assets/hero-structural.png" alt="Consultanță în inginerie structurală" />
   <figcaption>Hai să discutăm tehnic: calcule, verificări, optimizări</figcaption>
 </figure>
 
@@ -41,10 +42,10 @@
     <h3>Trimite un mesaj</h3>
     <form>
       <label>Nume</label>
-      <input type="text" name="nume" placeholder="Numele tău">
+      <input type="text" name="nume" placeholder="Numele tău" />
 
       <label>Email</label>
-      <input type="email" name="email" placeholder="email@exemplu.com">
+      <input type="email" name="email" placeholder="email@exemplu.com" />
 
       <label>Mesaj</label>
       <textarea name="mesaj" rows="5" placeholder="Scrie mesajul tău aici"></textarea>
@@ -60,10 +61,9 @@
 
 <script>
 (function(){
-  const path = location.pathname.split('/').pop() || 'contact.html';
+  const file = location.pathname.split('/').pop() || 'contact.html';
   document.querySelectorAll('.nav a').forEach(a=>{
-    const href = a.getAttribute('href');
-    if (href === path) a.classList.add('active');
+    if (a.getAttribute('href') === file) a.classList.add('active');
   });
 })();
 </script>
