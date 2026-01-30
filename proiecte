@@ -3,24 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Proiecte - Inginerie Structurală</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; background:#f3f3f3; }
-        header { background: #003366; padding: 20px; color: white; }
-        nav a { margin-right: 20px; color: white; text-decoration: none; font-weight: bold; }
-        .content { padding:40px; }
-        .project { background:white; padding:20px; margin-bottom:20px; border-radius:5px; }
-        footer { background:#003366; color:white; padding:20px; text-align:center; margin-top:40px; }
-    </style>
+    style.css
 </head>
 <body>
 
 <header>
     <h1>Proiecte</h1>
     <nav>
-        <a href="index.html">Acasă</a>
-        <a href="servicii.html">Servicii</a>
-        <a href="proiecte.html">Proiecte</a>
-        <a href="contact.html">Contact</a>
+        index.htmlAcasă</a>
+        servicii.htmlServicii</a>
+        proiecte.htmlProiecte</a>
+        contact.htmlContact</a>
     </nav>
 </header>
 
