@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Servicii — Inginerie Structurală</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
   <div class="container nav">
     <a href="index.html">Acasă</a>
-    <a href="servicii.html" class="active">Servicii</a>
+    <a href="servicii.html">Servicii</a>
     <a href="proiecte.html">Proiecte</a>
     <a href="contact.html">Contact</a>
   </div>
@@ -24,8 +24,9 @@
   </div>
 </section>
 
+<!-- Imagine contextuală (opțional) -->
 <figure class="container">
-  <img src="assets/hero-structural.png" alt="Inginerie structurală - servicii" class="hero-img" loading="lazy" onerror="this.style.display='none'">
+  <img class="hero-img" src="assets/hero-structural.png" alt="Inginerie structurală — servicii" />
   <figcaption>De la concept la execuție: calcul, modelare FEM, optimizări și verificări</figcaption>
 </figure>
 
@@ -57,10 +58,9 @@
 
 <script>
 (function(){
-  const path = location.pathname.split('/').pop() || 'servicii.html';
+  const file = location.pathname.split('/').pop() || 'servicii.html';
   document.querySelectorAll('.nav a').forEach(a=>{
-    const href = a.getAttribute('href');
-    if (href === path) a.classList.add('active');
+    if (a.getAttribute('href') === file) a.classList.add('active');
   });
 })();
 </script>
