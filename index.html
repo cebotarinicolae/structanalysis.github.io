@@ -1,44 +1,72 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <title>Acasă - Inginerie Structurală</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acasă — Inginerie Structurală</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <nav>
+  <div class="container nav">
     <a href="index.html" class="active">Acasă</a>
     <a href="servicii.html">Servicii</a>
     <a href="proiecte.html">Proiecte</a>
     <a href="contact.html">Contact</a>
-  </nav>
+  </div>
 </header>
 
-
-<div class="hero">
+<section class="hero">
+  <div class="container">
     <h1>Inginerie Structurală & Consultanță</h1>
     <p>Proiectare, analiză și optimizare structurală pentru construcții moderne, sigure și eficiente.</p>
-</div>
+  </div>
+</section>
+
+<!-- HERO IMAGE (salvează imaginea: assets/hero-structural.png) -->
+<figure class="container">
+  <img src="assets/hero-structural.png" alt="Banner inginerie structurală" class="hero-img" loading="lazy" onerror="this.style.display='none'">
+  <figcaption>Structuri moderne • Modelare, calcul, verificări conform Eurocod</figcaption>
+</figure>
 
 <section>
+  <div class="container">
     <h2>Despre Ingineria Structurală</h2>
-    <p>Ingineria structurală este una dintre cele mai importante ramuri ale ingineriei civile, având ca obiectiv asigurarea rezistenței, stabilității și durabilității structurilor. O structură bine proiectată trebuie să suporte încărcări gravitaționale, seismice, climatice, tehnologice și dinamice, garantând siguranța utilizatorilor în orice etapă a ciclului de viață.</p>
+    <p>Ingineria structurală este ramura ingineriei civile care asigură rezistența, stabilitatea și durabilitatea construcțiilor. O structură corect proiectată trebuie să preia în siguranță acțiuni gravitaționale, seismice, climatice și tehnologice de-a lungul întregului ciclu de viață.</p>
 
-    <p>Inginerul structural analizează comportamentul materialelor, mecanica structurilor și interacțiunea acestora cu mediul, folosind metode clasice de calcul, dar și analize complexe asistate de software performant. Prin combinarea cunoștințelor teoretice cu experiența practică, se obțin soluții eficiente, adaptate fiecărui proiect.</p>
+    <p>Rolul inginerului structural depășește calculul elementelor. El coordonează soluția tehnică astfel încât arhitectura, funcționalitatea și eficiența economică să fie echilibrate. Cu ajutorul analizelor FEM, a normativelor moderne (Eurocod) și a experienței din șantier, se pot lua decizii corecte încă din fazele incipiente ale proiectului.</p>
 
-    <h2>Misiunea mea</h2>
-    <p>Ca inginer constructor specializat în inginerie structurală, ofer servicii profesionale orientate spre calitate și siguranță. Obiectivul meu este să găsesc soluții tehnice optime, adaptate cerințelor arhitecturale, funcționale și economice, respectând standardele și normativele în vigoare.</p>
+    <h2>Valori & Misiune</h2>
+    <p>Sunt Nicolae Cebotari, inginer constructor cu specializare în inginerie structurală. Ofer consultanță, proiectare și verificări structurale pentru clădiri civile și industriale. Obiectivul meu este să livrez soluții robuste, optimizate și ușor de executat, care respectă standardele și cresc siguranța utilizatorilor.</p>
+  </div>
+</section>
 
-    <p>Indiferent de complexitate, fiecare proiect este tratat cu seriozitate, atenție la detalii și dorința de a oferi o structură modernă, stabilă și durabilă. O structură bine realizată nu este doar un rezultat tehnic, ci o contribuție reală la siguranța oamenilor și la calitatea mediului construit.</p>
+<section>
+  <div class="container">
+    <h2>Galerie</h2>
+    <!-- Temporar, folosim aceeași imagine pentru toate cele 3 tile-uri; voi genera restul în pasul următor -->
+    <div class="gallery">
+      <img src="assets/hero-structural.png" alt="Model FEM / Cadru" loading="lazy" onerror="this.style.display='none'">
+      <img src="assets/hero-structural.png" alt="Hală metalică" loading="lazy" onerror="this.style.display='none'">
+      <img src="assets/hero-structural.png" alt="Clădire modernă" loading="lazy" onerror="this.style.display='none'">
+    </div>
+  </div>
 </section>
 
 <footer>
-    © 2026 Cebotari Nicolae – Inginerie Structurală
+  © 2026 Cebotari Nicolae – Inginerie Structurală
 </footer>
 
+<!-- Evidențiere automată a link-ului paginii curente -->
+<script>
+(function(){
+  const path = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav a').forEach(a=>{
+    const href = a.getAttribute('href');
+    if ((path === '' && href === 'index.html') || href === path) a.classList.add('active');
+  });
+})();
+</script>
 </body>
 </html>
