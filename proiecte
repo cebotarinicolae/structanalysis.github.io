@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Proiecte - Inginerie Structurală</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background:#f3f3f3; }
+        header { background: #003366; padding: 20px; color: white; }
+        nav a { margin-right: 20px; color: white; text-decoration: none; font-weight: bold; }
+        .content { padding:40px; }
+        .project { background:white; padding:20px; margin-bottom:20px; border-radius:5px; }
+        footer { background:#003366; color:white; padding:20px; text-align:center; margin-top:40px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Proiecte</h1>
+    <nav>
+        <a href="index.html">Acasă</a>
+        <a href="servicii.html">Servicii</a>
+        <a href="proiecte.html">Proiecte</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="content">
+    <h2>Lucrări și proiecte realizate</h2>
+
+    <div class="project">
+        <h3>Clădire rezidențială P+2</h3>
+        <p>Calcul structural complet, modelare FEM, optimizare grinzi și stâlpi.</p>
+    </div>
+
+    <div class="project">
+        <h3>Hala industrială metalică</h3>
+        <p>Analiză încărcări, verificare noduri metalice, dimensionare elemente.</p>
+    </div>
+
+    <div class="project">
+        <h3>Extindere clădire existentă</h3>
+        <p>Expertiză preliminară, soluții tehnice și recomandări pentru consolidare.</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Cebotari Nicolae – Inginerie Structurală
+</footer>
+
+</body>
+</html>
