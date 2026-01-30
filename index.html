@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Acasă — Inginerie Structurală</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
   <div class="container nav">
-    <a href="index.html" class="active">Acasă</a>
+    <a href="index.html">Acasă</a>
     <a href="servicii.html">Servicii</a>
     <a href="proiecte.html">Proiecte</a>
     <a href="contact.html">Contact</a>
@@ -24,9 +24,9 @@
   </div>
 </section>
 
-<!-- HERO IMAGE (salvează imaginea: assets/hero-structural.png) -->
+<!-- Imagine hero (opțional) -->
 <figure class="container">
-  <img src="assets/hero-structural.png" alt="Banner inginerie structurală" class="hero-img" loading="lazy" onerror="this.style.display='none'">
+  <img class="hero-img" src="assets/hero-structural.png" alt="Structură modernă — exemplu de modelare și proiectare" />
   <figcaption>Structuri moderne • Modelare, calcul, verificări conform Eurocod</figcaption>
 </figure>
 
@@ -45,11 +45,11 @@
 <section>
   <div class="container">
     <h2>Galerie</h2>
-    <!-- Temporar, folosim aceeași imagine pentru toate cele 3 tile-uri; voi genera restul în pasul următor -->
+    <!-- Deocamdată folosim aceeași imagine pentru toate cele 3 tile-uri (poți adăuga altele în /assets) -->
     <div class="gallery">
-      <img src="assets/hero-structural.png" alt="Model FEM / Cadru" loading="lazy" onerror="this.style.display='none'">
-      <img src="assets/hero-structural.png" alt="Hală metalică" loading="lazy" onerror="this.style.display='none'">
-      <img src="assets/hero-structural.png" alt="Clădire modernă" loading="lazy" onerror="this.style.display='none'">
+      <img src="assets/hero-structural.png" alt="Model FEM — exemplu" loading="lazy" />
+      <img src="assets/hero-structural.png" alt="Hală metalică — exemplu" loading="lazy" />
+      <img src="assets/hero-structural.png" alt="Clădire modernă — exemplu" loading="lazy" />
     </div>
   </div>
 </section>
@@ -61,10 +61,9 @@
 <!-- Evidențiere automată a link-ului paginii curente -->
 <script>
 (function(){
-  const path = location.pathname.split('/').pop() || 'index.html';
+  const file = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav a').forEach(a=>{
-    const href = a.getAttribute('href');
-    if ((path === '' && href === 'index.html') || href === path) a.classList.add('active');
+    if (a.getAttribute('href') === file) a.classList.add('active');
   });
 })();
 </script>
