@@ -1,0 +1,148 @@
+/* ======= Reset minimal ======= */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ======= Bază ======= */
+:root{
+  --brand-dk:#0B1F3A;
+  --brand-md:#1F4D7A;
+  --bg:#F5F7FA;
+  --card:#FFFFFF;
+  --muted:#6B7280;
+  --line:#E5ECF4;
+}
+
+body{
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color:#0A0A0A;
+  line-height:1.55;
+}
+
+/* ======= Header & nav ======= */
+.site-header{
+  background: var(--brand-dk);
+  color:#fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:64px;
+}
+
+.brand{
+  display:flex; align-items:center; gap:12px;
+  text-decoration:none; color:#fff;
+}
+
+.brand img{ width:36px; height:36px; }
+
+.brand .title{
+  font-weight:700; letter-spacing:.2px; font-size:18px;
+}
+
+nav ul{
+  display:flex; gap:20px; list-style:none; margin:0; padding:0;
+}
+
+nav a{
+  color:#E8EEF7; text-decoration:none; font-weight:600; padding:8px 10px;
+  border-radius:6px; transition: all .15s ease;
+}
+
+nav a:hover{ background: rgba(255,255,255,.08); color:#fff; }
+
+nav a.active{ background:#173558; color:#fff; }
+
+/* ======= Hero ======= */
+.hero{
+  background: linear-gradient(180deg, #0B1F3A 0%, #112845 100%);
+  color:#fff;
+  padding:64px 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+     radial-gradient(600px 200px at 15% -10%, rgba(255,255,255,.08), transparent 60%),
+     radial-gradient(500px 180px at 90% 0%, rgba(255,255,255,.05), transparent 60%);
+  pointer-events:none;
+}
+.hero h1{ margin:0 0 10px 0; font-size:34px; }
+.hero p{ margin:0; color:#D6E3F4; max-width:800px; }
+.hero .cta{
+  margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;
+}
+.btn{
+  display:inline-block; padding:12px 18px; border-radius:8px;
+  text-decoration:none; font-weight:700;
+}
+.btn-primary{ background:#1F74C9; color:#fff; }
+.btn-primary:hover{ background:#1863AA; }
+.btn-ghost{ border:1px solid rgba(255,255,255,.3); color:#fff; }
+.btn-ghost:hover{ background:rgba(255,255,255,.08); }
+
+/* ======= Secțiuni ======= */
+.section{ padding:48px 0; }
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:24px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+.grid-3{
+  display:grid; gap:20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-2{
+  display:grid; gap:20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.section h2{ margin:0 0 18px 0; font-size:26px; }
+.muted{ color:var(--muted); }
+
+/* ======= Liste proiecte ======= */
+.project{
+  border-left: 4px solid var(--brand-md);
+  padding-left:16px;
+}
+.project h3{ margin:0 0 6px 0; }
+
+/* ======= Form ======= */
+form label{ display:block; font-weight:600; margin-top:12px; }
+input, textarea{
+  width:100%; padding:12px 14px; margin-top:6px;
+  border:1px solid #D1D5DB; border-radius:8px; background:#fff;
+}
+button{
+  margin-top:16px; padding:12px 18px; border:none; border-radius:8px;
+  background:var(--brand-md); color:#fff; font-weight:700; cursor:pointer;
+}
+button:hover{ background:#1A3F66; }
+
+/* ======= Footer ======= */
+footer{
+  background: var(--brand-dk);
+  color:#AFC3DB;
+  padding:24px 0; margin-top:32px;
+  text-align:center; font-size:14px;
+}
+
+/* ======= Responsive ======= */
+@media (max-width: 900
