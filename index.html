@@ -1,89 +1,62 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Acasă — Inginerie Structurală</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Inginerie — Servicii de proiectare complete și integrate</title>
+  <meta name="description" content="Inginerie — servicii de proiectare complete și integrate. Proiecte, servicii și informații de contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Poți schimba familia de fonturi după preferințe -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <!-- Navigație laterală (desktop) / top bar (mobil) -->
+  <aside class="side-nav" aria-label="Navigație principală">
+    <a class="brand" href="index.html" aria-label="Acasă Inginerie">
+      <!-- Monogramă simplă în loc de logo; se poate înlocui cu un fișier SVG/PNG -->
+      <span class="brand-mark" aria-hidden="true">I</span>
+      <span class="brand-text">Inginerie</span>
+    </a>
 
-<header>
-  <div class="container nav">
-    <a href="index.html">Acasă</a>
-    <a href="servicii.html">Servicii</a>
-    <a href="proiecte.html">Proiecte</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</header>
+    <nav class="menu" role="navigation">
+      <ul>
+        <li><a class="active" href="index.html" aria-current="page">Acasă</a></li>
+        <li><a href="proiecte.html">Proiecte</a></li>
+        <li><a href="servicii.html">Servicii</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-<section class="hero">
-  <div class="container">
-    <h1>Inginerie Structurală & Consultanță</h1>
-    <p>
-      Proiectare, analiză și optimizare structurală pentru construcții moderne,
-      sigure și eficiente.
-    </p>
-  </div>
-</section>
+  <!-- Conținut principal cu secțiunea erou -->
+  <main class="hero" role="main" aria-label="Prezentare Inginerie">
+    <!-- overlay întunecat pentru lizibilitate -->
+    <div class="hero-overlay" aria-hidden="true"></div>
 
-<!-- DESPRE + IMAGINE (50% / 50%) -->
-<section class="about-section">
-  <div class="about-text">
-    <h2>Despre Ingineria Structurală</h2>
-    <p>
-      Ingineria structurală este ramura ingineriei civile care asigură
-      rezistența, stabilitatea și durabilitatea construcțiilor. O structură
-      corect proiectată trebuie să preia în siguranță acțiuni gravitaționale,
-      seismice, climatice și tehnologice pe întreaga durată de viață.
-    </p>
-    <p>
-      Rolul inginerului structural depășește simplul calcul. Prin utilizarea
-      analizelor FEM, a normativelor moderne (Eurocod) și a experienței din
-      șantier, soluțiile sunt optimizate din punct de vedere tehnic și economic
-      încă din fazele incipiente ale proiectului.
-    </p>
+    <section class="hero-content">
+      <h1>Inginerie — Servicii de proiectare complete și integrate.</h1>
+      <p>
+        Oferim soluții de proiectare multidisciplinară, de la concept la implementare,
+        cu accent pe calitate, siguranță și eficiență. Colaborăm strâns cu partenerii
+        pentru a livra proiecte robuste, durabile și optimizate.
+      </p>
 
-    <h3>Valori & Misiune</h3>
-    <p>
-      Sunt Nicolae Cebotari, inginer constructor specializat în inginerie
-      structurală. Ofer consultanță, proiectare și verificări structurale pentru
-      clădiri civile și industriale, cu accent pe siguranță, claritate și
-      soluții ușor de executat.
-    </p>
-  </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="proiecte.html">Vezi proiecte</a>
+        <a class="btn btn-ghost" href="servicii.html">Serviciile noastre</a>
+      </div>
+    </section>
+  </main>
 
-  <div class="about-image">
-    <img
-      src="assets/hero-structural.png"
-      alt="Modelare și analiză structurală – exemplu de structură modernă"
-    />
-  </div>
-</section>
+  <footer class="site-footer" role="contentinfo">
+    <p>© <span id="year"></span> Inginerie. Toate drepturile rezervate.</p>
+  </footer>
 
-<section>
-  <div class="container">
-    <h2>Galerie</h2>
-    <div class="gallery">
-      <img src="assets/hero-structural.png" alt="Model FEM — exemplu" loading="lazy" />
-      <img src="assets/hero-structural.png" alt="Hală metalică — exemplu" loading="lazy" />
-      <img src="assets/hero-structural.png" alt="Clădire modernă — exemplu" loading="lazy" />
-    </div>
-  </div>
-</section>
-
-<footer>
-  © 2026 Cebotari Nicolae – Inginerie Structurală
-</footer>
-
-<script>
-(function(){
-  const file = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav a').forEach(a=>{
-    if (a.getAttribute('href') === file) a.classList.add('active');
-  });
-})();
-</script>
-
+  <script>
+    // Actualizare automată a anului din footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
